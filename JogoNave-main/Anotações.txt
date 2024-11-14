@@ -1,0 +1,48 @@
+Questão 2: Sistema de Reservas de Hotel
+Enunciado:
+
+Uma rede de hotéis deseja implementar um sistema de reservas que inclua os seguintes elementos:
+
+Hotéis: Cada hotel tem um nome, localização e vários quartos.
+Quartos: Cada quarto possui um número, tipo e está associado a um único hotel.
+Clientes: Cada cliente tem um nome, número de telefone e pode fazer várias reservas.
+Reservas: Cada reserva está vinculada a um cliente e a um quarto em um determinado período.
+Perguntas:
+
+Como você criaria as tabelas para armazenar as informações dos hotéis, quartos, clientes e reservas?
+Explique como você poderia listar todos os quartos disponíveis em um hotel específico para um determinado período.
+Descreva como você obteria uma lista de todos os clientes que fizeram reservas em um determinado hotel, juntamente com os detalhes das suas reservas.
+Se um cliente deseja saber quais quartos do mesmo tipo estão disponíveis em todos os hotéis da rede, como você projetaria essa consulta?
+
+Questão 3: Sistema de Gestão de Projetos
+Enunciado:
+
+Uma empresa de tecnologia está desenvolvendo um sistema para gerenciar seus projetos, que deve incluir:
+
+Projetos: Cada projeto possui um nome, uma data de início e fim.
+Equipes: Cada equipe é responsável por vários projetos e possui um líder de equipe.
+Membros da equipe: Cada membro pode fazer parte de várias equipes e pode trabalhar em vários projetos.
+Tarefas: Cada projeto é dividido em várias tarefas, e cada tarefa é atribuída a um ou mais membros da equipe.
+Perguntas:
+
+Descreva a estrutura das tabelas necessárias para modelar este sistema, incluindo chaves primárias e estrangeiras.
+Como você criaria uma consulta para listar todos os projetos, incluindo os nomes das equipes responsáveis e seus líderes?
+Explique como você listaria todas as tarefas de um projeto específico, incluindo os membros da equipe que estão trabalhando em cada tarefa.
+Se um líder de equipe deseja saber em quais projetos seus membros estão trabalhando, como você projetaria essa consulta?
+
+
+Questão 4: Sistema de E-commerce
+Enunciado:
+
+Uma plataforma de e-commerce precisa organizar seu banco de dados para gerenciar as seguintes informações:
+
+Produtos: Cada produto tem um nome, preço e pertence a uma categoria.
+Categorias: Cada categoria contém vários produtos.
+Clientes: Cada cliente tem um nome, endereço e pode fazer vários pedidos.
+Pedidos: Cada pedido contém várias linhas de pedido, cada uma associada a um produto e um cliente.
+Perguntas:
+
+Descreva como você estruturaria as tabelas e relacionamentos para armazenar essas informações.
+Explique como você obteria uma lista de todos os pedidos feitos por um cliente específico, incluindo os detalhes de cada produto e categoria.
+Como você projetaria uma consulta para listar todas as categorias e os produtos mais vendidos em cada categoria?
+Se um cliente deseja ver todos os produtos que comprou em um determinado período, como você criaria essa consulta?
