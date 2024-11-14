@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://dhp0vvvdcrf4d"]
+
+[ext_resource type="PackedScene" uid="uid://620pk7rgk6fh" path="res://Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://83rr7p66rr0" path="res://Alien.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://c0svwij2rvt2m" path="res://Material rescue/wallpaper.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cdgjesxuq6vk3" path="res://Material rescue/ui_buttons_arrow_right_NORMAL.png" id="4_djdki"]
+[ext_resource type="Texture2D" uid="uid://dpuy2pgkb00jm" path="res://Material rescue/ui_buttons_arrow_right_PRESSED.png" id="5_0b0fa"]
+[ext_resource type="Texture2D" uid="uid://bu5qi0xmrs68a" path="res://Material rescue/ui_buttons_arrow_left_NORMAL.png" id="6_8bcww"]
+[ext_resource type="Texture2D" uid="uid://ccsyu36ky1gsu" path="res://Material rescue/ui_buttons_arrow_left_PRESSED.png" id="7_x5nf1"]
+[ext_resource type="Texture2D" uid="uid://w52eif25j75r" path="res://Material rescue/ui_buttons_arrow_up_NORMAL.png" id="8_25gv7"]
+[ext_resource type="Texture2D" uid="uid://cci2620b6vmmk" path="res://Material rescue/ui_buttons_arrow_up_PRESSED.png" id="9_dgiht"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(97.8834, 194.624)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 3.05176e-05)
+texture = ExtResource("3")
+centered = false
+
+[node name="Alien" parent="." instance=ExtResource("2")]
+position = Vector2(480.13, 102.028)
+
+[node name="controles" type="CanvasLayer" parent="."]
+
+[node name="ui_right" type="TouchScreenButton" parent="controles"]
+position = Vector2(116, 325)
+scale = Vector2(1.5625, 1.1875)
+texture_normal = ExtResource("4_djdki")
+texture_pressed = ExtResource("5_0b0fa")
+action = "ui_right"
+
+[node name="ui_left" type="TouchScreenButton" parent="controles"]
+position = Vector2(57, 324)
+scale = Vector2(1.4375, 1.25)
+texture_normal = ExtResource("6_8bcww")
+texture_pressed = ExtResource("7_x5nf1")
+action = "ui_left"
+
+[node name="ui_up" type="TouchScreenButton" parent="controles"]
+position = Vector2(91, 276)
+scale = Vector2(1.3125, 1.25)
+texture_normal = ExtResource("8_25gv7")
+texture_pressed = ExtResource("9_dgiht")
+action = "ui_up"
+
+[node name="ui_down" type="TouchScreenButton" parent="controles"]
+position = Vector2(130, 411)
+rotation = 3.14159
+scale = Vector2(1.3125, 1.25)
+texture_normal = ExtResource("8_25gv7")
+texture_pressed = ExtResource("9_dgiht")
+action = "ui_down"
+
+[node name="atira" type="TouchScreenButton" parent="controles"]
+position = Vector2(316, 316)
+scale = Vector2(1.3125, 1.25)
+texture_normal = ExtResource("8_25gv7")
+texture_pressed = ExtResource("9_dgiht")
+action = "atira"

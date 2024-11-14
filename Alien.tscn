@@ -1,0 +1,76 @@
+[gd_scene load_steps=14 format=3 uid="uid://83rr7p66rr0"]
+
+[ext_resource type="Texture2D" uid="uid://5vec5r75hw8d" path="res://Material rescue/explosao/Explosao7.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dq5qcw1ffd1p4" path="res://Material rescue/Alien/alien1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://rq0koul0oyq1" path="res://Material rescue/Alien/alien2.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://c4udmhkdoec57" path="res://Material rescue/explosao/Explosao2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b0q443tqbxk0r" path="res://Material rescue/explosao/Explosao4.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://ce2n05wtwgib0" path="res://Material rescue/explosao/Explosao5.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://brjf0mapbcx82" path="res://Material rescue/explosao/Explosao1.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cvfq01xa1kt2i" path="res://Material rescue/explosao/Explosao3.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://xe1x8w0vxyoa" path="res://Material rescue/explosao/Explosao6.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://c5tynreknay8q" path="res://Material rescue/explosao/Explosao8.png" id="10"]
+[ext_resource type="Script" path="res://Alien.gd" id="11"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}],
+"loop": true,
+"name": &"explosao",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="2"]
+radius = 89.388
+
+[node name="Alien" type="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("11")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 0)
+sprite_frames = SubResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("2")
+
+[node name="morte" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="morte" to="." method="_on_morte_timeout"]
